@@ -4,6 +4,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import json from "@rollup/plugin-json";
 import pkg from "./package.json";
 import terser from "@rollup/plugin-terser";
+import typescript from "@rollup/plugin-typescript";
 
 const input = "./src/XAPI.ts";
 
@@ -72,6 +73,7 @@ export default [
         file: pkg.main,
         format: "cjs",
         exports: "default",
+        sourcemap: true,
       },
     ],
   },
